@@ -4,15 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="./q1.js"></script>
   </head>
   <body>
-    Please select 4 subject <br />
-    Subject 1: <input id="s1" type="text" /><br />
-    Subject 2: <input id="s2" type="text" /><br />
-    Subject 3: <input id="s3" type="text" /><br />
-    Subject 4: <input id="s4" type="text" /><br />
-    <button onclick="showSelection()">Show Selection</button><br />
-    <span id="spanTag"></span>
+    <input id="input1" type="text" size="5" />
+    <select>
+      <option>+</option>
+      <option>-</option>
+      <option>x</option>
+      <option>/</option>
+    </select>
+    <input id="input2" type="text" size="5" />
+    =
+    <input id="value" type="text" size="5" />
+    <button onclick="checkValue()">Check</button><span id="label"></span>
   </body>
 </html>

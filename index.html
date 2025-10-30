@@ -3,38 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slideshow</title>
-    <script>
-      var slideShow;
-      var animationOn = false;
-      var index = 0;
-
-      var arr_img = ["images/img1.png", "images/img2.png", "images/img3.png"];
-
-      function start() {
-        if (!animationOn) {
-          slideShow = setInterval(showImg, 1200);
-          animationOn = true;
-        }
+    <title>Assignment Navigation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+        text-align: center;
+        margin: 0;
+        padding: 50px;
       }
 
-      function stop() {
-        clearInterval(slideShow);
-        animationOn = false;
+      h1 {
+        color: #2c3e50;
       }
 
-      function showImg() {
-        var imgElement = document.getElementById("imgHolder");
-        imgElement.src = arr_img[index];
-        index++;
-        if (index === arr_img.length) index = 0;
+      ul {
+        list-style: none;
+        padding: 0;
       }
-    </script>
+
+      li {
+        margin: 15px 0;
+      }
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        background-color: #0078d4;
+        padding: 10px 20px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+      }
+
+      a:hover {
+        background-color: #005fa3;
+      }
+
+      footer {
+        margin-top: 40px;
+        font-size: 0.9em;
+        color: #777;
+      }
+    </style>
   </head>
+
   <body>
-    <button onclick="start()">Start Slideshow</button>
-    <button onclick="stop()">Stop Slideshow</button>
-    <br /><br />
-    <img id="imgHolder" height="200px" />
+    <h1>Assignment Navigation Page</h1>
+    <p>Select a question below to open it:</p>
+
+    <ul>
+      <li><a href="./q1.html" target="_blank">Question 1 </a></li>
+      <li><a href="./q2.html" target="_blank">Question 2 </a></li>
+      <li><a href="./q3.html" target="_blank">Question 3 </a></li>
+      <li><a href="./q4.html" target="_blank">Question 4 </a></li>
+      <li><a href="./q5.html" target="_blank">Question 5 </a></li>
+    </ul>
+
+    <footer>© 2025 BrxwnSugxr – Web Development Assignment</footer>
   </body>
 </html>

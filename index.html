@@ -4,18 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script>
+      function checkValue() {
+        var value1 = Number(document.getElementById("input1").value);
+        var value2 = Number(document.getElementById("input2").value);
+        var operation = document.getElementById("operationSelected").value;
+
+        if (operation == "add") {
+          result = value1 + value2;
+        } else if (operation == "subtract") {
+          result = value1 - value2;
+        } else if (operation == "times") {
+          result = value1 * value2;
+        } else if (operation == "divide") {
+          result = value1 / value2;
+        }
+        var userAnswer = document.getElementById("answer").value;
+
+        if (userAnswer == result) {
+          document.getElementById("label").innerHTML = "correct";
+        } else {
+          document.getElementById("label").innerHTML = "incorrect";
+        }
+      }
+    </script>
   </head>
   <body>
     <input id="input1" type="text" size="5" />
-    <select>
-      <option>+</option>
-      <option>-</option>
-      <option>x</option>
-      <option>/</option>
+    <select id="operationSelected">
+      <option value="add">+</option>
+      <option value="subtract">-</option>
+      <option value="times">x</option>
+      <option value="divide">/</option>
     </select>
     <input id="input2" type="text" size="5" />
     =
-    <input id="value" type="text" size="5" />
+    <input id="answer" type="text" size="5" />
     <button onclick="checkValue()">Check</button><span id="label"></span>
   </body>
 </html>
